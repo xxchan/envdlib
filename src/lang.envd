@@ -17,7 +17,7 @@ def rust():
     """Install Rust."""
     run(
         [
-            "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y",
+            "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- --no-modify-path -y",
         ]
     )
     runtime.environ(extra_path=["/home/envd/.cargo/bin"])
